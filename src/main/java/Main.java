@@ -1,9 +1,10 @@
-import java.awt.*;
-
 public class Main {
-    public static void main(String[] args){
-        int x = 5, y = 6, z;
-        z = Calc.add(x,y);
-        System.out.print(z);
+    public static void main(String args []){
+        Number maxNumber = new Number(0);
+        for (int i = 1; i <= 1000000; i++){
+            Number newNumber = new Number(i);
+            Collatz.findCollatzSequence(newNumber, i);
+        }
+        System.out.print(maxNumber.maxSequenceLength);
     }
 }
